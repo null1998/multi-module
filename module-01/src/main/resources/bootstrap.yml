@@ -1,0 +1,17 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: module-01
+  cloud:
+    nacos:
+      config:
+        server-addr: ${NACOS_HOST}
+        namespace: ${NACOS_NAMESPACE}
+        shared-configs:
+          application.yml
+      discovery:
+        server-addr: ${NACOS_HOST}
+        namespace: ${NACOS_NAMESPACE}
+        metadata:
+          name: 模块01

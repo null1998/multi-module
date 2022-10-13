@@ -22,6 +22,11 @@
             <artifactId>module-01-api</artifactId>
             <version>${revision}</version>
         </dependency>
+        <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>module-rocketmq</artifactId>
+            <version>${revision}</version>
+        </dependency>
     </dependencies>
 
 </project>

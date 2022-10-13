@@ -12,19 +12,21 @@
     <groupId>org.example</groupId>
     <artifactId>multi-module</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${revision}</version>
     <modules>
         <module>module-01</module>
         <module>module-02</module>
         <module>module-common</module>
+        <module>module-01-api</module>
     </modules>
 
     <properties>
+        <revision>1.0-SNAPSHOT</revision>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <spring.cloud.dependencies.version>2021.0.4</spring.cloud.dependencies.version>
-        <spring.cloud.starter.alibaba.version>2021.0.4.0</spring.cloud.starter.alibaba.version>
+        <spring.cloud.alibaba.dependencies.version>2021.0.4.0</spring.cloud.alibaba.dependencies.version>
         <mysql.connector.version>8.0.30</mysql.connector.version>
     </properties>
 
@@ -34,6 +36,13 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring.cloud.dependencies.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.dependencies.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
